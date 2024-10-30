@@ -8,8 +8,8 @@ use(BetterErrors::Middleware)
 BetterErrors.application_root = __dir__
 BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
-get("/home") do
-  erb(:home)
+get("/rules") do
+  erb(:rules)
 end
 
 get("/rock") do
@@ -27,7 +27,7 @@ get("/rock") do
   @user_choice = user_choice
   @computer_choice = computer_choice
 
-  erb(:rock)
+  erb(:play_rock)
 end 
 
 get("/paper") do
@@ -45,7 +45,7 @@ get("/paper") do
   @user_choice = user_choice
   @computer_choice = computer_choice
 
-  erb(:paper)
+  erb(:play_paper)
 end 
 
 get("/scissors") do
@@ -63,5 +63,5 @@ get("/scissors") do
   @user_choice = user_choice
   @computer_choice = computer_choice
 
-  erb(:scissors)
+  erb(:play_scissors)
 end 
